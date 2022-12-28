@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Large_integers_arithmetic_client_p2</string>
+    <string name = "edit_host"> Enter host domain name</string>
+    <string name = "edit_port"> Enter port number</string>
+    <string name = "button_connect"> CONNECT TO SERVER </string>
+    <string name = "text_heading"><b><u>Determine the answer of an operation between two Big Integers.\n\n </u></b>
+    Enter the desired operation and the two Big Integers. \n
+    Then press the button to receive the answer.</string>
+    <string name = "edit_operation">Enter the desired operation</string>
+    <string name = "edit_big_int_1">Enter the first Big Integer </string>
+    <string name = "edit_big_int_2">Enter the second Big Integer </string>
+    <string name = "button_string"> CALCULATE </string>
+    <string name = "answer_string"> Answer goes here. </string>
+    <string name="directions">Connect to the server by entering the domain name and port # in the text fields and pressing the button</string>
+</resources>

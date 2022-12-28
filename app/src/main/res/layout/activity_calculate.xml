@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Calculate Activity for calculating result based on user input of values and operation -->
+<!--
+/////////////////////////////////////////////////////////
+//        Alvee Jalal                                  //
+//        IT114, Section 001                          //
+//        Dr. Halper                                  //
+//        App Project #2                              //
+//        Dec. 6, 2022                                //
+//                                                    //
+//        This app is designed to perform as a        //
+//        client to a respected server that           //
+//        performs arithmetic with large integers.    //
+//        This app (client) will take as input        //
+//        the domain name and port # of the server,   //
+//        connect to it, take in the desired operation//
+//        and numbers, send them to the server, and   //
+//        receives back the value calculated, and     //
+//        finally disconnects from the server.        //
+///////////////////////////////////////////////////////-->
+<!-- Linear Layout so we can stack things one ontop of another-->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CalculateActivity">
+    <!-- TextView with directions-->
+        <TextView android:id="@+id/text_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="@string/text_heading"/>
+    <!-- TextView with directions-->
+       <Space android:layout_height="10dp"
+        android:layout_width="match_parent"/>
+
+    <!-- Line to separate TextView and input text fields-->
+    <View android:layout_height="0.5dp"
+           android:layout_width="fill_parent"
+           android:background="#000000"
+           />
+
+    <!-- Some spacing above the first text field to ensure user can see what they're typing-->
+    <Space android:layout_height="10dp"
+            android:layout_width="match_parent"/>
+
+    <!-- Text field to type in operation-->
+    <EditText
+            android:id="@+id/edit_operation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_operation"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+    <!-- Text field to type in first Big Integer-->
+    <EditText
+            android:id="@+id/edit_big_int_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_big_int_1"
+            android:minHeight="48dp" />
+
+    <!-- Text field to type in second Big Integer-->
+        <EditText
+            android:id="@+id/edit_big_int_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_big_int_2"
+            android:minHeight="48dp" />
+    <!-- Button that runs the "calculateResult" method which sends the inputs to the server,
+     performs the operation, retrieves results from the server, and displays the result-->
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text = "@string/button_string"
+            android:layout_gravity="center_horizontal"
+            android:onClick="calculateResult" />
+
+
+        <!-- Spacing and horizontal rule (line) to separate Button from TextView -->
+
+        <Space
+            android:layout_height="10dp"
+            android:layout_width="match_parent" />
+
+    <!-- Space to separate TextView below and buttons-->
+
+    <View
+            android:layout_height="10dp"
+            android:layout_width="match_parent"/>
+
+
+    <!-- TextView to display result-->
+
+        <TextView
+            android:id="@+id/text_answer"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/answer_string"/>
+
+    </LinearLayout>

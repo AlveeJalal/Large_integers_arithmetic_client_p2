@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/////////////////////////////////////////////////////////
+//        Alvee Jalal                                  //
+//        IT114, Section 001                          //
+//        Dr. Halper                                  //
+//        App Project #2                              //
+//        Dec. 6, 2022                                //
+//                                                    //
+//        This app is designed to perform as a        //
+//        client to a respected server that           //
+//        performs arithmetic with large integers.    //
+//        This app (client) will take as input        //
+//        the domain name and port # of the server,   //
+//        connect to it, take in the desired operation//
+//        and numbers, send them to the server, and   //
+//        receives back the value calculated, and     //
+//        finally disconnects from the server.        //
+/////////////////////////////////////////////////////// -->
+
+<!-- Main Activity for connecting to server by inputting hostname and port #-->
+<!-- Linear Layout so we can stack things one ontop of another-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Some spacing above the first text field to ensure user can see what they're typing-->
+    <Space android:layout_width="match_parent"
+        android:layout_height="10dp"
+        />
+
+    <!-- Text field to type in host domain name-->
+
+    <EditText
+        android:id="@+id/edit_host"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="@string/edit_host"
+        />
+
+    <!-- Some spacing between first and second text field for organization-->
+    <Space android:layout_width="match_parent"
+        android:layout_height="10dp"
+        />
+
+    <!-- Text field to type in port #-->
+    <EditText
+        android:id="@+id/edit_port"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/edit_port"
+        />
+
+    <!-- Some spacing between 2nd text field and button-->
+
+    <Space android:layout_width="match_parent"
+        android:layout_height="10dp"
+        />
+
+    <!-- Button that will create new activity and send hostname and port info to the Activity-->
+    <Button
+        android:id="@+id/button_connect"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="connectServer"
+        android:text="@string/button_connect"
+        />
+
+    <!-- Just a textview below the button. Just for standard organization/-->
+    <TextView
+        android:id="@+id/text_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/directions"
+        />
+</LinearLayout>
