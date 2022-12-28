@@ -1,5 +1,5 @@
 # Large_integers_arithmetic_client_p2
-*This is a small project I completed in my Android Studio Java programming class called IT114 - Advanced Programming for Information Technology at New Jersey Institute 
+* This is a small project I completed in my Android Studio Java programming class called IT114 - Advanced Programming for Information Technology at New Jersey Institute 
 of Technoloy in Fall 2022.
 This demonstrates Client/Server interaction using sockets and server sockets implemented in Android Studio (Java) and XML. 
 The project is meant to perform a desired operation on large integers and display the result. 
